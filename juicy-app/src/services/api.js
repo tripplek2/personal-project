@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3001/";
+const BASE_URL = "http://localhost:3001";
 
 // store info
 
@@ -43,6 +43,7 @@ export const addProduct = async (product) => {
             headers: {
                 "Content-Type": "application/json"
             },
+            body: JSON.stringify(product)
         });
 
         if (!res.ok) {
@@ -56,14 +57,14 @@ export const addProduct = async (product) => {
 };
 
 //PATCH-update part of a product
-export const updateProduct = async (IdleDeadline, updateData) => {
+export const updateProduct = async (id, updatedData) => {
     try {
         const res = await fetch(`${BASE_URL}/juice/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(updateData)
+            body: JSON.stringify(updatedData)
         });
 
         if (!res.ok) {
@@ -79,7 +80,7 @@ export const updateProduct = async (IdleDeadline, updateData) => {
 // DELETE delete product
 export const deleteProduct = async (id) => {
     try {
-        const res = await fetch(`${BASE-URL}/juice/${id}`, {
+        const res = await fetch(`${BASE_URL}/juice/${id}`, {
             method: "DELETE"
         });
 

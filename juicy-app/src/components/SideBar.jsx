@@ -1,4 +1,4 @@
-import SideBar from "./SearchBar";
+import SearchBar from "./SearchBar";
 
 function SideBar({ search, setSearch }) {
   return (
