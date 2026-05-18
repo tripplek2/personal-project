@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import SideBar from "../components/SideBar";
 import ProductGrid from "../components/ProductGrid";
+import "./App.css";
 
 function ShopPage() {
     //get global products from context
@@ -16,10 +17,10 @@ function ShopPage() {
     //filter logic
     const filteredProducts = products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
   return (
-    <div>
-      <h1>Shop</h1>
+    <div className="page-container">
+      <h1>Juice Shop🧃</h1>
 
-      <div style={{ display: "flex"}}>
+      <div className="shop-layout">
       <SideBar search={search} setSearch={setSearch} /> 
       <ProductGrid products={filteredProducts} />  
       </div> 
