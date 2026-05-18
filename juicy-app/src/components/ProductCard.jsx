@@ -1,4 +1,5 @@
 function ProductCard({ product }) {
+    if (!product) return null;
   return (
     <div>
         <h3>{product.name}</h3>
