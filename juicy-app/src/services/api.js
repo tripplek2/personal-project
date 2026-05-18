@@ -34,3 +34,23 @@ export const getProducts = async () => {
         return [];
     }
 };
+
+//POST-add new product
+export const addProduct = async (product) => {
+    try {
+        const res = await fetch(`${BASE_URL}/juice`,{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to add product");
+        }
+
+        return await res.json();
+    } catch (error) {
+        console.error("Error adding product", error);
+    }
+};
