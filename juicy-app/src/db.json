@@ -1,0 +1,28 @@
+{
+    "store-info": [
+        {
+           "id": 1,
+           "name": "Juice it!",
+           "description": "Your number one store",
+           "phone_number": "0700396675"
+        }
+    ],
+    "juice": [
+        {
+            "id": 1,
+           "name": "Mint-Lemonade",
+           "description": "Zesty, tangy, cool and crisp",
+           "origin": "Middle East",
+           "price": 100 
+
+        },
+        {
+            "id": 2,
+           "name": "Cold-Pressed apple ginger",
+           "description": "Balanced sweet and spicy",
+           "origin": "Ancient Asian",
+           "price": 250
+
+        }
+    ]
+}
