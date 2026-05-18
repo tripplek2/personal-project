@@ -75,3 +75,20 @@ export const updateProduct = async (IdleDeadline, updateData) => {
         console.error("Error updating product");
     }
 };
+
+// DELETE delete product
+export const deleteProduct = async (id) => {
+    try {
+        const res = await fetch(`${BASE-URL}/juice/${id}`, {
+            method: "DELETE"
+        });
+
+        if (!res.ok) {
+            throw new Error("Failed to delete product");
+        }
+
+        return true;
+    } catch (error) {
+        console.error("Error deleting product", error);
+    }
+};
