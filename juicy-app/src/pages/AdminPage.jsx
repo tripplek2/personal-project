@@ -57,7 +57,7 @@ function AdminPage() {
     <div className="page-container">
      <h1>Add New Product</h1>
 
-     {success && <p style={{ color: "green" }}>{success}</p>}
+     {success && <h1 className="success-message">{success}</h1>}
 
      <form className="form-container" onSubmit={handleSubmit}>
        <input 

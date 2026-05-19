@@ -50,26 +50,34 @@ function ProductCard({ product }) {
                 type="number" 
                 value={newPrice}
                 onChange={(e) => setNewPrice(e.target.value)} />
-
-                <button onClick={handleUpdate}>Save</button>
+               <div className="card-actions">
+                <button className="save-btn" onClick={handleUpdate}>Save</button>
+               </div>
             </>
             
         ) : (
             
-            <p className="product-price">KSh {product.price}</p>
-        )}
+           <>
+      <p className="product-price">KSh {product.price}</p>
 
-            <div className="card-actions">
-                {!isEditing && (
-            <button onClick={() => setIsEditing(true)}>Edit Price</button>
-            
-        )}
+      <div className="card-actions">
+        <button
+          className="edit-btn"
+          onClick={() => setIsEditing(true)}
+        >
+          Edit Price
+        </button>
 
-        {/* Delete btn */}
-        <button onClick={handleDelete}>Delete</button>
-      
-    </div>
-    </div>
+        <button
+          className="delete-btn"
+          onClick={handleDelete}
+        >
+          Delete
+        </button>
+      </div>
+    </>
+  )}
+  </div>
   );
 }
 
