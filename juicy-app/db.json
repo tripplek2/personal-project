@@ -1,5 +1,5 @@
 {
-   "store-info": [
+  "store-info": [
     {
       "id": "1",
       "name": "Juice it!",
@@ -67,9 +67,9 @@
     {
       "name": "Cherry Juice",
       "description": "Tart and sweet",
-      "origin": "Europe",
-      "price": 200,
-      "id": "Ryzgnt47WTE"
+      "origin": "Central Asia",
+      "price": 100,
+      "id": "aOxVra_ZR6Q"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

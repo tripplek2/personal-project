@@ -4,6 +4,7 @@ import { addProduct } from "../services/api";
 
 function AdminPage() {
     const { products, setProducts } = useContext(ProductContext);
+    const [success, setSuccess] = useState("");
 
     //form state
     const [formData, setFormData] = useState({
@@ -41,6 +42,9 @@ function AdminPage() {
         //update UI
         setProducts([...products, newProduct]);
 
+        setSuccess("Product added successfully!")
+
+
         //rest form
         setFormData({
             name: "",
@@ -52,6 +56,8 @@ function AdminPage() {
   return (
     <div className="page-container">
      <h1>Add New Product</h1>
+
+     {success && <p style={{ color: "green" }}>{success}</p>}
 
      <form className="form-container" onSubmit={handleSubmit}>
        <input 
