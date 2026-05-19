@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { updateProduct } from "../services/api";
+import { deleteProduct } from "../services/api";
 
 function ProductCard({ product }) {
     if (!product) return null;
@@ -20,6 +21,17 @@ function ProductCard({ product }) {
         setProducts(updatedList);
         setIsEditing(false);
     };
+
+    //handle delete
+    const handleDelete = async () => {
+        const confirmDelete = window.confirm("are you sure");
+        if (!confirmDelete) return;
+        
+        await deleteProduct(product.id);
+
+        const updatedList = products.filter((p) => p.id !== product.id);
+        setProducts(updatedList);
+    }
   return (
     <div className="product-card">
         <h3>{product.name}</h3>
@@ -41,6 +53,9 @@ function ProductCard({ product }) {
             <button onClick={() => setIsEditing(true)}>Edit Price</button>
             </>
         )}
+
+        {/* Delete btn */}
+        <button onClick={handleDelete}>Delete</button>
       
     </div>
   );
