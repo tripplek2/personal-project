@@ -15,6 +15,23 @@ h1, h2, h3 {
 
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.home-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #555;
+}
+
 /* layout */
 .page-container {
   min-height: 80vh;
@@ -35,9 +52,9 @@ h1, h2, h3 {
   gap: 20px;
   align-items: flex-start;
   width: 100%;
-  max-width: 100%;
-  padding: 20px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 /* Responsive */
@@ -49,16 +66,21 @@ h1, h2, h3 {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 30px;
   background-color: #4caf50;
-  color: white;
-  box-shadow:  0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 40px;
 }
 
 .nav-links a {
-  margin-left: 20px;
   text-decoration: none;
   color: whitesmoke;
   font-weight: bold;
@@ -67,7 +89,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #5e0bdc;
 
 }
 
@@ -108,19 +130,26 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: antiquewhite;
+  background-color: #fff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.2s ease;
   gap: 12px;
   height: 100%;
   width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
   transition: 0.2s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .product-card h3 {
@@ -132,7 +161,7 @@ h1, h2, h3 {
 }
 
 .product-price {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #2e7d32; 
   margin-top: 8px;
@@ -147,6 +176,7 @@ button {
   padding: 10px 14px;
   border: none;
   border-radius: 10px;
+  background-color: #4caf50;
   color: white;
   cursor: pointer;
   transition: 0.2s;
@@ -155,7 +185,7 @@ button {
 }
 
 button:hover {
-  background-color: #4caf50;
+  background-color: #388e3c;
 }
 
 /* Form */
@@ -215,6 +245,11 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
   border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-actions button:hover {
+  transform: translateY(-2px);
 }
 
 .edit-btn {
@@ -254,7 +289,7 @@ button:hover {
 }
 
 .footer {
-  margin-top: 40px;
+  margin-top: auto;
   padding: 20px;
   text-align: center;
   background-color: #4caf50;
