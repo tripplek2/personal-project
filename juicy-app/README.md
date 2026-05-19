@@ -1,18 +1,50 @@
-# React + Vite
+# Juice It! App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application for browsing and managing juice products.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Home page
+- Shop page to view all products
+- Search and filter products
+- Add new products (Admin page)
+- Edit product price
+- Delete products
+- Data fetched from a local API (json-server)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- React Router
+- Context API
+- CSS
+- JSON Server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-link>
+cd juicy-app
+2.Install dependencies
+npm install
+3.npm run dev
+4.npx json server --watch db.json --port 3001
+
+## Usage
+1.Navigate to shop to browse and search products
+2.Go to Admin to add,edit or delete products
+
+## Future improvements
+1.Add product images
+2.Improve UI with animations
+3.Deploy app online
+
+## Author
+Kelvin Korir
