@@ -10,23 +10,22 @@
   "juice": [
     {
       "id": "1",
-      "name": "Mint-Lemonade",
+      "name": "Mint Lemonade",
       "description": "Zesty, tangy, cool and crisp",
       "origin": "Middle East",
-      "price": 100
+      "price": 150
     },
     {
       "id": "2",
       "name": "Cold-Pressed apple ginger",
       "description": "Balanced sweet and spicy",
-      "origin": "Ancient Asian",
+      "origin": "Ancient Asia",
       "price": 250
     },
-    
     {
       "name": "Classic Orange Juice",
-      "description": "Sweet vibrant and packed with vitamin c",
-      "origin": "United States(Florida)",
+      "description": "Sweet vibrant and packed with Vitamin C",
+      "origin": "Florida USA",
       "price": 100,
       "id": "6ruIrsdImVU"
     },
@@ -45,7 +44,7 @@
       "id": "6Ufm4Rodgw8"
     },
     {
-      "name": "Cripsy Honeycrisp Apple",
+      "name": "Crispy Honeycrisp Apple",
       "description": "Clean, familiar sweetness with a refreshing bite",
       "origin": "Central Asia",
       "price": 200,
@@ -55,15 +54,22 @@
       "name": "Coastal Madafu",
       "description": "Light, hydrating and naturally sweet to combat the coastal heat",
       "origin": "Mombasa",
-      "price": 80,
+      "price": 150,
       "id": "VWxLSS4I6dQ"
     },
     {
       "name": "Nairobi Avocado Blend",
       "description": "A unique, ultra-thick, meal-like juice",
       "origin": "Kiambu",
-      "price": 20,
+      "price": 100,
       "id": "PULgnKRHxsE"
+    },
+    {
+      "name": "Cherry Juice",
+      "description": "Tart and sweet",
+      "origin": "Europe",
+      "price": 200,
+      "id": "Ryzgnt47WTE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

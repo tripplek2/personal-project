@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
-import { updateProduct } from "../services/api";
-import { deleteProduct } from "../services/api";
+import { updateProduct, deleteProduct } from "../services/api";
+
 
 function ProductCard({ product }) {
     if (!product) return null;
@@ -24,39 +24,51 @@ function ProductCard({ product }) {
 
     //handle delete
     const handleDelete = async () => {
-        const confirmDelete = window.confirm("are you sure");
+        console.log("Deleting:", product.id);
+        const confirmDelete = window.confirm("are you sure you want to delete this product?");
         if (!confirmDelete) return;
         
+        try {
         await deleteProduct(product.id);
 
         const updatedList = products.filter((p) => p.id !== product.id);
         setProducts(updatedList);
+    } catch (error) {
+        console.error("Delete failed", error);
     }
+    };
   return (
     <div className="product-card">
         <h3>{product.name}</h3>
-        <p>{product.description}</p>
-        <p><strong>Origin:</strong>{product.origin}</p>
-        <p><strong>{product.price}</strong></p>
+        <p className="p-desc">{product.description}</p>
+        <p className="p-org"><strong>Origin:</strong> {product.origin}</p>
+        
 
         {isEditing ? (
             <>
-              <input 
+              <input
+                type="number" 
+                value={newPrice}
                 onChange={(e) => setNewPrice(e.target.value)} />
 
                 <button onClick={handleUpdate}>Save</button>
             </>
             
         ) : (
-            <>
-            <p><strong>${product.price}</strong></p>
+            
+            <p className="product-price">KSh {product.price}</p>
+        )}
+
+            <div className="card-actions">
+                {!isEditing && (
             <button onClick={() => setIsEditing(true)}>Edit Price</button>
-            </>
+            
         )}
 
         {/* Delete btn */}
         <button onClick={handleDelete}>Delete</button>
       
+    </div>
     </div>
   );
 }
