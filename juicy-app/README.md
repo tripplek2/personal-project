@@ -37,6 +37,26 @@ npm install
 3.npm run dev
 4.npx json server --watch db.json --port 3001
 
+## Project structure
+src/
+  components/
+    NavBar.jsx
+    Footer.jsx
+    ProductCard.jsx
+    ProductGrid.jsx
+    SideBar.jsx
+
+  pages/
+    HomePage.jsx
+    ShopPage.jsx
+    AdminPage.jsx
+
+  context/
+    ProductContext.jsx
+
+  services/
+    api.js
+
 ## Usage
 1.Navigate to shop to browse and search products
 2.Go to Admin to add,edit or delete products
