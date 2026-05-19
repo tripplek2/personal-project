@@ -1,28 +1,70 @@
 {
-    "store-info": [
-        {
-           "id": 1,
-           "name": "Juice it!",
-           "description": "Your number one store",
-           "phone_number": "0700396675"
-        }
-    ],
-    "juice": [
-        {
-            "id": 1,
-           "name": "Mint-Lemonade",
-           "description": "Zesty, tangy, cool and crisp",
-           "origin": "Middle East",
-           "price": 100 
-
-        },
-        {
-            "id": 2,
-           "name": "Cold-Pressed apple ginger",
-           "description": "Balanced sweet and spicy",
-           "origin": "Ancient Asian",
-           "price": 250
-
-        }
-    ]
+  "store-info": [
+    {
+      "id": "1",
+      "name": "Juice it!",
+      "description": "Your number one store",
+      "phone_number": "0700396675"
+    }
+  ],
+  "juice": [
+    {
+      "id": "1",
+      "name": "Mint-Lemonade",
+      "description": "Zesty, tangy, cool and crisp",
+      "origin": "Middle East",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "name": "Cold-Pressed apple ginger",
+      "description": "Balanced sweet and spicy",
+      "origin": "Ancient Asian",
+      "price": 250
+    },
+    
+    {
+      "name": "Classic Orange Juice",
+      "description": "Sweet vibrant and packed with vitamin c",
+      "origin": "United States(Florida)",
+      "price": 100,
+      "id": "6ruIrsdImVU"
+    },
+    {
+      "name": "Ruby Red Grapefruit",
+      "description": "Bold, tangy and invigorantingly bitter",
+      "origin": "Barbados",
+      "price": 150,
+      "id": "0ItzDTPLoJY"
+    },
+    {
+      "name": "Passionate Guava Blend",
+      "description": "Exotic, musky and beautifully sweet",
+      "origin": "Central America",
+      "price": 200,
+      "id": "6Ufm4Rodgw8"
+    },
+    {
+      "name": "Cripsy Honeycrisp Apple",
+      "description": "Clean, familiar sweetness with a refreshing bite",
+      "origin": "Central Asia",
+      "price": 200,
+      "id": "2djB_j7npzE"
+    },
+    {
+      "name": "Coastal Madafu",
+      "description": "Light, hydrating and naturally sweet to combat the coastal heat",
+      "origin": "Mombasa",
+      "price": 80,
+      "id": "VWxLSS4I6dQ"
+    },
+    {
+      "name": "Nairobi Avocado Blend",
+      "description": "A unique, ultra-thick, meal-like juice",
+      "origin": "Kiambu",
+      "price": 20,
+      "id": "PULgnKRHxsE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

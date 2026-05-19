@@ -26,6 +26,11 @@ function AdminPage() {
     // handle form submit
     const handleSubmit = async (e) => {
         e.preventDefault();
+        //validation
+        if (!formData.name || !formData.price) {
+        alert("Please fill in required fields (name and price)");
+        return; // stops form submission
+    }
 
         //send POST to backend
         const newProduct = await addProduct({
@@ -45,10 +50,10 @@ function AdminPage() {
         });
     }
   return (
-    <div>
-     <h1>Shop</h1>
+    <div className="page-container">
+     <h1>Add New Product</h1>
 
-     <form onSubmit={handleSubmit}>
+     <form className="form-container" onSubmit={handleSubmit}>
        <input 
          name="name" 
          placeholder="Product Name"

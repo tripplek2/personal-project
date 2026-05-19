@@ -3,19 +3,9 @@ function ProductGrid({ products }) {
     return <p>No products available</p>;
   }
   return (
-    <div style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-      gap: "1rem",
-      width: "100%",
-      padding: "1rem"
-    }}>
+    <div className="product-grid">
       {products.map((product) => (
-        <div key={product.id} style={{
-          border: "1px solid #ccc",
-          padding: "1rem",
-          borderRadius: "8px"
-        }}>
+        <div className="product-card" key={product.id} >
           <h3>{product.name}</h3>
           <p>{product.description}</p>
           <p>{product.origin}</p>

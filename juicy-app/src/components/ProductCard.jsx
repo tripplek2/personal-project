@@ -21,7 +21,7 @@ function ProductCard({ product }) {
         setIsEditing(false);
     };
   return (
-    <div>
+    <div className="product-card">
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <p><strong>Origin:</strong>{product.origin}</p>

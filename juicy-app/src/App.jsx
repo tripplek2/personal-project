@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage"
 import ShopPage from "./pages/ShopPage"
 import AdminPage from "./pages/AdminPage"
 import NavBar from "./components/NavBar";
+import "./App.css"
 
 function App() {
   return (

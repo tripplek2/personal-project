@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { ProductContext } from "../context/ProductContext";
 import SideBar from "../components/SideBar";
 import ProductGrid from "../components/ProductGrid";
-import "./App.css";
+
 
 function ShopPage() {
     //get global products from context
